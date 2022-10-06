@@ -1,0 +1,93 @@
+
+.contactPage{
+    height: auto;
+    width: 100%;
+
+    margin-top: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+}
+
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+
+.title{
+    color: white;
+    /*position: fixed;*/
+}
+
+#contactForm{
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*position: fixed;*/
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+label{
+    color: white;
+}
+input{
+    width: 50%;
+}
+.nameAndEmail{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.projectdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    width: 9em;
+    height: 3em;
+    background: red;
+}
+
+.socials{
+    background-color: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+}
+.orparagraf{
+    color: white;
+}
+.socialIcons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3em;
+    margin-bottom: 0.75em;
+}
+.icon{
+    width: 2em;
+    height: 2em;
+}

@@ -1,0 +1,44 @@
+.projectpage{
+    height: 100vh;
+}
+.gromGrid{
+    height: 100vh;
+    padding: 1em;
+    /*padding: 23vh 1em 1em 1em;*/
+}
+
+.card {
+    background-color: rgba(0,0,0,0.15);
+    color: white;
+    padding: 1em 0 0 0;
+}
+
+#cardCoursetimerhovered{
+
+    top:0;
+    bottom:0;
+    left:3em;
+    right:initial;
+
+
+    margin: auto;
+}
+
+#coursePic{
+    height: 500px;
+    width: inherit;
+    background-image: url('./images/front-black-xl_1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*#outer_container{*/
+/*    height: 25vh;*/
+/*    background-image: url('./images/projectheader1.jpg');*/
+/*    background-position: center;*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-blend-mode: overlay;*/
+/*    */
+/*}*/

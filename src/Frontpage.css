@@ -1,0 +1,111 @@
+/*Inhoud*/
+
+
+.frontPage{
+    height: auto;
+    width: 100%;
+    overflow-block: hidden;
+    display: inline-block;
+    position: relative;
+
+}
+#outer_container{
+    width: 100%;
+
+}
+
+.gromGrid{
+    /*height: 100%;*/
+    max-width: 100%;
+}
+
+
+h6.introduction{
+    color: white;
+    margin-top: 0.5em;
+    font-size: 2em;
+}
+
+
+.letter{
+    font-weight: 900;
+    font-size: 3.25em;
+    color: #fff;
+
+}
+.StyledBox-sc-13pk1d4-0 {
+    max-width: 50%;
+
+}
+
+.card-title{
+    font-size: 2.5em;
+}
+
+.whoIAm {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    justify-content: center;
+}
+
+.pictureMe{
+    background-image: url('./images/mepic4_remove_colored-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: right;
+
+    background-size: 60em 100%;
+    height: 30em;
+    width: 100%;
+
+}
+
+.whatIsThis{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 0;
+    justify-content: center;
+}
+
+/**Hovering cards**/
+.hoveredCard{
+    background: linear-gradient(to top left, #506d96  0%, #8a4571 100%);
+    color: white;
+    border: 1px solid #000000;
+
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+    min-height: 20em;
+    max-height: fit-content;
+    width: 70em;
+    margin: auto;
+
+    padding:3em;
+}
+
+.content_markup{
+    font-size: large;
+}
+
+.skillDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 1em 2em 0 2em;
+}
+.expTilte{
+    font-size: 1.5em;
+    padding-right: 1em;
+}
+
+.expCube{
+    margin-right: 1em;
+}
+
+#expertiesCard{
+    page-break-after: always;
+}
+

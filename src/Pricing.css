@@ -1,0 +1,87 @@
+
+
+.grid-container2{
+    width: 100%;
+    height: 100vh;
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 100%;
+    grid-template-areas: 'ArrowLeft Prices ArrowRight';
+}
+.arrowLeft{
+    grid-area: ArrowLeft;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.arrowLeft:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.arrBack{
+
+}
+
+.prices{
+    grid-area: Prices;
+}
+.grid-container3{
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 33% 33% 33% ;
+    grid-template-areas: 'PR1, PR2, PR3';
+
+    gap: 0.5em;
+
+    height: 100%;
+    padding: 0;
+
+}
+#pricerangepr1{
+    grid-area: PR1;
+    height: 100%;
+}
+#pricerangepr2{
+    grid-area: PR2;
+    height: 100%;
+}
+#pricerangepr3{
+    grid-area: PR3;
+    height: 100%;
+}
+
+.ct{
+    color: #506d96;
+}
+.listitem{
+    background-color: white;
+}
+.h4cards{
+    height: fit-content;
+    color: black;
+}
+
+.arrowRight{
+    grid-area: ArrowRight;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.arrowRight:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+/**/
+/*
+#pricelist li:nth-child(2){
+    transform: scale(1.05, 1.05);
+}*/
