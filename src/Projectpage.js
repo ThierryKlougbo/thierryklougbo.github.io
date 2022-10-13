@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Box, Grid} from 'grommet';
 import "./Projectpage.css";
 import {AnimatePresence, motion} from "framer-motion";
@@ -40,11 +40,21 @@ function Projectpage(){
 
     let stillPresent = false;
 
+    //Window resizing
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
 
 
     return(
         <div className={"projectpage"}>
-
 
             <div id={'outer_container'}
                  onClick={(e) => {
@@ -65,8 +75,8 @@ function Projectpage(){
                     {name: 'coursetimerPic', start:[1, 0], end: [1,0]},
                     {name: 'discordFrame', start: [2, 1], end: [2, 1]}
                     ]}
-                    columns={['medium', 'medium', 'flex']}
-                    rows={['small', 'flex']}
+                    columns={['flex', 'flex', 'flex']}
+                    rows={['flex', 'medium']}
                     gap='medium'
                     >
 
@@ -91,10 +101,7 @@ function Projectpage(){
 
                     <Box gridArea={'coursetimerPic'} id={'coursePic'} animation={{type: "fadeIn", duration: 2000}}/>
                     <Box gridArea={'discordFrame'} animation={{type: "fadeIn", duration: 2000}}>
-                        {/*https://titanembeds.com/user/administrate_guild/963175225032339540*/}
-                        {/*<iframe src="https://titanembeds.com/embed/963175225032339540" height="350" width="800" frameBorder="0"/>*/}
-                        <iframe src="https://e.widgetbot.io/channels/963175225032339540/963175225569189982" height="600" width="800"></iframe>
-
+                        <iframe src="https://e.widgetbot.io/channels/963175225032339540/963175225569189982" height="600" width="100%"></iframe>
                     </Box>
 
                 </Grid>

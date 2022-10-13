@@ -1,5 +1,5 @@
 
-import React, {useState, Component} from 'react';
+import React, {useState, Component, useEffect} from 'react';
 import {useIsPresent, AnimatePresence, motion} from 'framer-motion';
 import "./Frontpage.css";
 import InfiniteScroll from "react-infinite-scroller";
@@ -65,6 +65,18 @@ function Frontpage(){
     let stillPresent = false;
     //&& e.target !== document.getElementById("card1")
     //                     && e.target !== document.getElementById("card2")
+
+    //Window resizing
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
 
     //Infinite scroll
     let pageAt = 0;
@@ -140,7 +152,7 @@ function Frontpage(){
                           {name: 'card2', start: [2, 1], end: [2, 1]},
                           {name: 'experties', start:[0, 2], end: [2, 2]}
                       ]}
-                      columns={['small', 'medium', 'flex']}
+                      columns={['flex', 'small', 'flex']}
                       rows={['medium', 'small', 'medium']}
                       gap={"medium"}
                 >
