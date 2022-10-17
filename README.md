@@ -1,3 +1,6 @@
 # Theirry.github.io
 
-This is a change 3.
+- git add .
+- git commit -m "something"
+- git push
+- npm run deploy
