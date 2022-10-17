@@ -1,8 +1,8 @@
 .projectpage{
-    height: 100vh;
+    height: 100%;
 }
 .gromGrid{
-    height: 100vh;
+    height: 100%;
     padding: 1em;
     /*padding: 23vh 1em 1em 1em;*/
 }
