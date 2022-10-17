@@ -73,7 +73,7 @@ function Projectpage(){
                     {name: 'cardCoursetimer', start: [0, 0], end: [0, 0]},
                     {name: 'cardUltimata', start: [2, 0], end: [2, 0]},
                     {name: 'coursetimerPic', start:[1, 0], end: [1,0]},
-                    {name: 'discordFrame', start: [2, 1], end: [2, 1]}
+                    {name: 'discordFrame', start: [1, 1], end: [2, 1]}
                     ]}
                     columns={['flex', 'flex', 'flex']}
                     rows={['flex', 'medium']}

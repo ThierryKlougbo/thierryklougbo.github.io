@@ -1,7 +1,6 @@
 
 import React, {useRef, useState} from 'react';
 import {MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos, MdEuro} from "react-icons/md"
-import {Button, Card}  from 'react-bootstrap';
 import {motion, AnimatePresence} from 'framer-motion';
 import "./Pricing.css"
 
