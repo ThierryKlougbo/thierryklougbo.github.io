@@ -5,7 +5,8 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import {FaHome, FaRaspberryPi } from "react-icons/fa";
 import {MdContactPage, MdOutlinePriceCheck} from "react-icons/md"
-
+import {FloatButton} from "antd";
+import {CommentOutlined, MenuOutlined} from "@ant-design/icons"
 
 export default function Header(){
     const [state, setState] = useState(0);
@@ -16,6 +17,10 @@ export default function Header(){
                     <img className="navlogoimage" src={logoimg} alt="Conpanny logo"/>
                 </figure>*/}
                 {/*<h1 className="pageTitle" style={{color: "white"}}>Portfolio</h1>*/}
+
+
+
+
                 <ul className="linkbar">
                     <li className={"navitem"}>
                         <Link className={"navlink"} to="/"> <FaHome style={{marginRight: '10px', marginBottom: '5'}}/> Home</Link>
