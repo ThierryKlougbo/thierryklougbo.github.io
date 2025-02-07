@@ -15,7 +15,7 @@ const card1 = {
     "class": "whoIAm",
     "title": "Who am I?",
     "text": "<br/>As you may have noticed, my name is Thierry Klougbo. " +
-        "<br/>I I am currently 22 years old, and originate from Togo (Africa) even though I have lived in Belgium for 13 years now." +
+        "<br/>I am currently 22 years old, and originate from Togo (Africa) even though I have lived in Belgium for 13 years now." +
        "<br/>Currently I am an Applied Informatics student at the university college of Erasmus in Brussels. " +
         "<br/>This goes to show that I am an aspiring Software Developer."+
        "<br/><br/>After graduating -in 2023- I am planning on working and meanwhile study for another bachelor.",
@@ -158,44 +158,49 @@ function Frontpage(){
                 >
 
                     {cardContent.map(item => (
-                        <Box gridArea={item.id} >
-                            <motion.div  id={item.id} layoutId={item.id+"layout"} className={"card-body card " + item.class}
-                                         onClick={() => {
-                                             setTitle(item.title);
-                                             setContent(item.text);
-                                             setItemClass(item.class);
-                                             document.getElementById(item.id).setAttribute("animate", "{{opacity: 0}}")
-                                             setSelectedId(item.id);
-                                         }}
+                        <Box key={item.id} gridArea={item.id}>
+                            <motion.div
+                                id={item.id}
+                                layoutId={item.id + "layout"}
+                                className={`card-body card ${item.class}`} 
+                                onClick={() => {
+                                    setTitle(item.title);
+                                    setContent(item.text);
+                                    setItemClass(item.class);
+                                    setSelectedId(item.id);
+                                }}
+                                animate={{ opacity: 1 }}
                             >
                                 <motion.div className="card-title">{item.title}</motion.div>
                             </motion.div>
                         </Box>
                     ))}
 
+
                     <Box gridArea={'myname'} gap={"small"}>
                         <h6 className={"introduction"}>Hello, I am</h6>
                         <h1 className={"ml12"}>
-                            <span className='letter'>T</span>
-                            <span className='letter'>H</span>
-                            <span className='letter'>I</span>
-                            <span className='letter'>E</span>
-                            <span className='letter'>R</span>
-                            <span className='letter'>R</span>
-                            <span className='letter'>Y</span>
-                            <span className='letter'> </span>
-                            <span className='letter'>K</span>
-                            <span className='letter'>L</span>
-                            <span className='letter'>O</span>
-                            <span className='letter'>U</span>
-                            <span className='letter'>G</span>
-                            <span className='letter'>B</span>
-                            <span className='letter'>O</span>
+                            <div className={"name_background"}>
+                                <span className='letter'>T</span>
+                                <span className='letter'>H</span>
+                                <span className='letter'>I</span>
+                                <span className='letter'>E</span>
+                                <span className='letter'>R</span>
+                                <span className='letter'>R</span>
+                                <span className='letter'>Y</span>
+                                <span className='letter'> </span>
+                                <span className='letter'>K</span>
+                                <span className='letter'>L</span>
+                                <span className='letter'>O</span>
+                                <span className='letter'>U</span>
+                                <span className='letter'>G</span>
+                                <span className='letter'>B</span>
+                                <span className='letter'>O</span>
+                            </div>
                         </h1>
-
                     </Box>
-                    <Box gridArea={'picMe'} className={"pictureMe"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/>
-
+                    {/* <Box gridArea={'picMe'} className={"pictureMe"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/> */}
+                    <Box gridArea={'picMe'} className={"pictureMe"} gap={"none"}></Box>
                     <Box gridArea={'experties'} className={"card-body card"} id={"expertiesCard"}>
                         <p className="card-title">My experties?</p>
                         <div className={"skillDiv"}>

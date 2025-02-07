@@ -14,7 +14,6 @@ body{
 }
 #outer_container{
     width: 100%;
-
 }
 
 .gromGrid{
@@ -27,14 +26,25 @@ h6.introduction{
     color: white;
     margin-top: 0.5em;
     font-size: 2em;
+    text-align: left;
+}
+
+
+.name_background{
+    display: inline-block;
+    text-align: left;
+    background: linear-gradient(to top left, #506d96  0%, #8a4571 100%);
+    background-size: 100% 100%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
 .letter{
     font-weight: 900;
     font-size: 3.25em;
-    color: #fff;
-
 }
 .StyledBox-sc-13pk1d4-0 {
     max-width: 50%;
@@ -46,12 +56,12 @@ h6.introduction{
 }
 
 .whoIAm {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
     color: white;
     justify-content: center;
 }
 
-.pictureMe{
+/* .pictureMe{
     background-image: url('./images/mepic4_remove_colored-removebg-preview.png');
     background-repeat: no-repeat;
     background-position: right;
@@ -60,7 +70,7 @@ h6.introduction{
     height: 30em;
     width: 100%;
 
-}
+} */
 
 .whatIsThis{
     background-color: rgba(0, 0, 0, 0);
@@ -71,9 +81,9 @@ h6.introduction{
 
 /**Hovering cards**/
 .hoveredCard{
-    background: linear-gradient(to top left, #506d96  0%, #8a4571 100%);
+    background: black;
     color: white;
-    border: 1px solid #000000;
+    border: 1px solid black;
 
     position: absolute;
     top:0;
