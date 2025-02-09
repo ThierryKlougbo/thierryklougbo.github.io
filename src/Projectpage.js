@@ -71,7 +71,7 @@ function Projectpage(){
                 <Grid className={"gromGrid"}
                     areas={[
                     {name: 'cardCoursetimer', start: [0, 0], end: [0, 0]},
-                    {name: 'cardUltimata', start: [2, 0], end: [2, 0]},
+                    {name: 'cardUltimata', start: [0, 1], end: [0, 1]},
                     {name: 'coursetimerPic', start:[1, 0], end: [1,0]},
                     {name: 'discordFrame', start: [1, 1], end: [2, 1]}
                     ]}

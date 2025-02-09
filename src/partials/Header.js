@@ -5,8 +5,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import {FaHome, FaRaspberryPi } from "react-icons/fa";
 import {MdContactPage, MdOutlinePriceCheck} from "react-icons/md"
-import {FloatButton} from "antd";
-import {CommentOutlined, MenuOutlined} from "@ant-design/icons"
+
 
 export default function Header(){
     const [state, setState] = useState(0);

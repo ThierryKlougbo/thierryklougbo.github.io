@@ -81,7 +81,7 @@ h6.introduction{
 
 /**Hovering cards**/
 .hoveredCard{
-    background: black;
+    background-color: black;
     color: white;
     border: 1px solid black;
 
@@ -96,7 +96,12 @@ h6.introduction{
     width: 70em;
     margin: auto;
 
-    padding:3em;
+
+    /* padding:3em; */
+}
+.hoveredCard.card.card-body{
+    background-color: rgba(0, 0, 0, 0.95);
+    padding-bottom: 1em;
 }
 
 .content_markup{
