@@ -101,10 +101,15 @@ h6.introduction{
 }
 .hoveredCard.card.card-body{
     background-color: rgba(0, 0, 0, 0.95);
+    padding-left: 2em;
+    padding-right: 2em;
     padding-bottom: 1em;
 }
-
-.content_markup{
+.card-text > .content_markup{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: left;
     font-size: large;
 }
 

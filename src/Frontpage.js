@@ -9,26 +9,36 @@ import {Markup} from "interweave";
 import {Box, Grid} from "grommet";
 import {Cube, Keyboard} from 'grommet-icons'
 
+const currentDate = new Date();
+const birthDate = new Date('November 11, 1999')
+const ageInMilliseconds = currentDate - birthDate;
+const ageUnrounded = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365)
+const age = Math.round(ageUnrounded)
+const timesLived  = age - 7
 
 const card1 = {
     "id": "card1",
     "class": "whoIAm",
-    "title": "Who am I?",
-    "text": "<br/>As you may have noticed, my name is Thierry Klougbo. " +
-        "<br/>I am currently 22 years old, and originate from Togo (Africa) even though I have lived in Belgium for 13 years now." +
-       "<br/>Currently I am an Applied Informatics student at the university college of Erasmus in Brussels. " +
-        "<br/>This goes to show that I am an aspiring Software Developer."+
-       "<br/><br/>After graduating -in 2023- I am planning on working and meanwhile study for another bachelor.",
+    "title": "About Me",
+    "subtitle": "Who Am I?",
+    "text": `<p></br>I'm a <b>${age}-year-old junior software developer</b> with <b>two years of experience</b> in software development.</br>
+Although originally I am from Togo (West-Africa) I have lived in Belgium for ${timesLived} years now and am fluent in Dutch, English and French.</br></br>
+I have hands-on experience in <b>Android development</b> as well as <b>frontend Web development using React</b>. All in all, I am very passionate about both <b>front-end and back-end engineering</b>, and I’m always eager to expand my skills and take on new challenges to build efficient, user-friendly applications.</br></br>
+Now beyond coding, I also enjoy <b>photography, cycling, gaming, and watching series</b>—I’m always looking for new ways to stay creative and inspired.</br></br>
+Feel free to explore my work, and let’s connect!</p>`,
     "gap":"small"
 };
 const card2 = {
     "id": "card2",
-    "title": "So, what is this?",
+    "title": "About This Portfolio",
     "class": "whatIsThis",
-    "text": "At first I started making this portfolio by simply using HTML, CSS and JavaScript. After learning PHP in school\n" +
-        "                        I made another version using that too. But after realising how much React JS is asced on the jobmarket, I decided to make the final version using\n" +
-        "                            that." +
-        " Not lightweight, since made this to try out Reactjs and many other js libraries for myself.",
+    "text": `<p></br>At first, I started making this portfolio by simply using HTML, CSS and JavaScript. 
+    But after learning about <b>React</b> in school, I decided that would be way more interesting for this project. 
+    So I built it with <b>React</b>, written in <b>JavaScript</b>.
+    </br> It incorporates some libraries, including <a href="https://animejs.com/documentation/" target="_blank">Anime.js</a> for animations.
+    </br></br> I originally created this portfolio as a way to experiment with new <b>JavaScript libraries</b> and I am planning on expanding and improving it as I continue to grow as a developer.
+    </br></br> On the <b>Projects</b> page, I keep track of <b>relevant personal projects</b> that I’ve worked on, showcasing my progress and experience in SD.
+    </br></br> Feel free to explore, and thanks for stopping by! 🚀</p>`,
     "gap": "none"
 };
 const cardContent = [card1, card2];

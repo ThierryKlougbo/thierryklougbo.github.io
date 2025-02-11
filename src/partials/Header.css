@@ -49,18 +49,36 @@ on <a href="https://unsplash.com/@thierryklougbo/likes?utm_source=unsplash&utm_m
 .linkbar{
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
 
     margin: 0 0 0 0;
     padding: 0;
 
     height: 5em;
+    width: 100%;
 
 }
 .pageTitle{
     align-self: center;
 }
 
+.nameNavItem{
+    padding: 22px 15px;
+    color:white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-style: oblique;
+
+    > div{
+        text-align: left;
+    }
+}
+
+ 
 .navitem{
     padding: 22px 15px;
     width: fit-content;
