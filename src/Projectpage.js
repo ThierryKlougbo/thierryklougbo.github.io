@@ -85,9 +85,9 @@ function Projectpage(){
                 <Grid className={"gromGrid"}
                     areas={[
                     {name: 'cardCoursetimer', start: [0, 0], end: [0, 0]},
-                    {name: 'cardUltimata', start: [0, 1], end: [0, 1]},
-                    {name: 'coursetimerPic', start:[1, 0], end: [1,0]},
-                    {name: 'discordFrame', start: [1, 1], end: [2, 1]}
+                    {name: 'cardUltimata', start:[1, 0], end: [2,0]},
+                    {name: 'empty1', start: [0, 1], end: [0, 1]},
+                    {name: 'empty2', start: [1, 1], end: [2, 1]}
                     ]}
                     columns={['flex', 'flex', 'flex']}
                     rows={['flex', 'medium']}
@@ -95,7 +95,8 @@ function Projectpage(){
                     >
 
                     {cardContent.map(item => (
-                        <Box gridArea={item.id} >
+                        
+                        <Box gridArea={item.id}>
                             <motion.div  id={item.id} layoutId={item.id+"layout"} className={"card-body card " + item.class}
                                          onClick={() => {
                                              setTitle(item.title);
@@ -104,19 +105,19 @@ function Projectpage(){
                                              setSubtitle(item.subtitle);
                                              document.getElementById(item.id).setAttribute("animate", "{{opacity: 0}}")
                                              setSelectedId(item.id);
-
                                          }}
                             >
                                 <motion.div className="card-title">{item.title}</motion.div>
-                                <motion.div id={item.id + `_backim`} />
+                                {/* <motion.div id={item.id + `_backim`} /> */}
+                                {item.id === 'cardCoursetimer' && (
+                                    <div id='coursePic'>{console.log(`itemid is= ${item.id}`)}</div>
+                                )}
+                                {item.id === 'cardUltimata' && (
+                                   <iframe src="https://e.widgetbot.io/channels/963175225032339540/963175225569189982" height="600" width="100%"></iframe>
+                                )}
                             </motion.div>
                         </Box>
                     ))}
-
-                    <Box gridArea={'coursetimerPic'} id={'coursePic'} animation={{type: "fadeIn", duration: 2000}}/>
-                    <Box gridArea={'discordFrame'} animation={{type: "fadeIn", duration: 2000}}>
-                        <iframe src="https://e.widgetbot.io/channels/963175225032339540/963175225569189982" height="600" width="100%"></iframe>
-                    </Box>
 
                 </Grid>
             </div>

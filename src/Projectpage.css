@@ -14,7 +14,6 @@
 }
 
 #cardCoursetimerhovered{
-
     top:0;
     bottom:0;
     left:3em;
@@ -32,6 +31,13 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+#cardCoursetimer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 
 /*#outer_container{*/
 /*    height: 25vh;*/

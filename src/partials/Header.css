@@ -5,14 +5,14 @@
 @media(min-height: 500px) {
     body {
         background: #2a2a2a;
-        height: fit-content;
+        min-height: 100vh;
         overflow: hidden;
     }
 }
 @media (max-height: 1902px){
     body {
         background: #2a2a2a;
-        height: fit-content;
+        min-height: 100vh;
         overflow: hidden;
     }
 }
