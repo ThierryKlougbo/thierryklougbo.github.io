@@ -185,8 +185,6 @@ function Frontpage(){
                             </motion.div>
                         </Box>
                     ))}
-
-
                     <Box gridArea={'myname'} gap={"small"}>
                         <h6 className={"introduction"}>Hello, I am</h6>
                         <h1 className={"ml12"}>
@@ -209,8 +207,8 @@ function Frontpage(){
                             </div>
                         </h1>
                     </Box>
-                    {/* <Box gridArea={'picMe'} className={"pictureMe"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/> */}
-                    <Box gridArea={'picMe'} className={"pictureMe"} gap={"none"}></Box>
+                    <Box gridArea={'picMe'} className={"pictureMe"} idd={"picMegrid"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/>
+                    {/* <Box gridArea={'picMe'} className={"pictureMe"} gap={"none"}></Box> */}
                     <Box gridArea={'experties'} className={"card-body card"} id={"expertiesCard"}>
                         <p className="card-title">My experties?</p>
                         <div className={"skillDiv"}>

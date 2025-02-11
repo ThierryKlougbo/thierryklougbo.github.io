@@ -50,11 +50,11 @@ on <a href="https://unsplash.com/@thierryklougbo/likes?utm_source=unsplash&utm_m
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-content: center;
 
     margin: 0 0 0 0;
     padding: 0;
 
-    height: 5em;
     width: 100%;
 
 }
@@ -77,22 +77,52 @@ on <a href="https://unsplash.com/@thierryklougbo/likes?utm_source=unsplash&utm_m
         text-align: left;
     }
 }
+#nameNavIcon{
+    font-size: 2em;
+    margin-right: 1em;
+    margin-bottom: 5px;
+}
+#nameNavText{
+    font-size: 1.5em;
+}
 
  
 .navitem{
-    padding: 22px 15px;
+    padding-right: 1em;
+    padding-left: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 1em;
     width: fit-content;
     overflow: hidden;
+
+    border-style: solid;
+    border-width: 0px 0px 2px;
+    border-color: white;
+
 }
-.navitem:hover{
-    background-color: red;
+#homeNavItem:hover{
+    border-color: #506d96;
+    > #homeLink{
+        color: #506d96;
+    }
 }
+#projectsNavItem:hover{
+    border-color: #8a4571;
+    > #projectsLink {
+        color: #8a4571;
+    }
+}
+
 .navlink{
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
-
 
 
 

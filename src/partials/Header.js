@@ -19,16 +19,16 @@ export default function Header(){
 
 
                 <div className={"nameNavItem"}>
-                    <FaUserAlt  style={{marginRight: '10px', marginBottom: '5'}}/><div>Thierry Klougbo</div>
+                    <FaUserAlt id={"nameNavIcon"} /><div id={"nameNavText"}>Thierry Klougbo</div>
                 </div>
               
                 <ul className="linkbar">
     
-                    <li className={"navitem"}>
-                        <Link className={"navlink"} to="/"> <FaHome style={{marginRight: '10px', marginBottom: '5'}}/> Home</Link>
+                    <li className={"navitem"} id={"homeNavItem"}>
+                        <Link className={"navlink"} id={"homeLink"} to="/"> <FaHome style={{marginRight: '10px', marginBottom: '5'}}/> Home</Link>
                     </li>
-                    <li className={"navitem"}>
-                        <Link className={"navlink"} to="/projects"> <FaRaspberryPi style={{marginRight: '10px', marginBottom: '5'}}/> Projects</Link>
+                    <li className={"navitem"} id={"projectsNavItem"}>
+                        <Link className={"navlink"} id={"projectsLink"} to="/projects"> <FaRaspberryPi style={{marginRight: '10px', marginBottom: '5'}}/> Projects</Link>
                     </li>
                     {/*<li className={"navitem"}>*/}
                     {/*    <Link className={"navlink"} to={"/pricing"}><MdOutlinePriceCheck style={{marginRight: '10px', marginBottom: '5'}}/>Pricing</Link>*/}
