@@ -207,7 +207,7 @@ function Frontpage(){
                             </div>
                         </h1>
                     </Box>
-                    <Box gridArea={'picMe'} className={"pictureMe"} idd={"picMegrid"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/>
+                    <Box gridArea={'picMe'} className={"pictureMe"} idd={"picMegrid"} gap={"none"}/>
                     {/* <Box gridArea={'picMe'} className={"pictureMe"} gap={"none"}></Box> */}
                     <Box gridArea={'experties'} className={"card-body card"} id={"expertiesCard"}>
                         <p className="card-title">My experties?</p>
