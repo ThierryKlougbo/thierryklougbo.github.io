@@ -48,7 +48,6 @@ h6.introduction{
 }
 .StyledBox-sc-13pk1d4-0 {
     max-width: 50%;
-
 }
 
 .card-title{
@@ -101,7 +100,7 @@ h6.introduction{
     max-height: fit-content;
     width: 70em;
     margin: auto;
-
+    z-index: 2;
 
     /* padding:3em; */
 }
