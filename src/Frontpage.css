@@ -118,6 +118,12 @@ h6.introduction{
     font-size: large;
 }
 
+
+.skillDivRow{
+    display: flex;
+    flex-direction: row;
+}
+
 .skillDiv{
     display: flex;
     flex-direction: row;
@@ -125,10 +131,10 @@ h6.introduction{
     padding: 1em 2em 0 2em;
 }
 .expTilte{
-    font-size: 1.5em;
+    font-size: 1em;
     padding-right: 1em;
+    margin: 0;
 }
-
 .expCube{
     margin-right: 1em;
 }

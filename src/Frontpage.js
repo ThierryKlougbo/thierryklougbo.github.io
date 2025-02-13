@@ -47,6 +47,8 @@ let colorRed = "rgba(168, 50, 80, 0.75)";
 let colorOrange = "rgba(168, 105, 50, 0.85)";
 let colorYellow = "rgba(168, 153, 50, 0.90)";
 let colorBlack = "rgba(0, 0, 0, 0.20)"
+let colorDarkGreen = "rgba(0, 100, 0, 0.90)"
+let colorGreen = "rgba(0, 180, 0, 0.9)"
 
 
 
@@ -121,18 +123,66 @@ function Frontpage(){
         delay: (el, i) => 10000 + 30 * i
     });
 
-    anime({
-        targets: '.expCube',
-        translateX: anime.stagger(-10, {grid: [5, 3], from: 'center', axis: 'x'}),
-        translateY: anime.stagger(15, {grid: [5, 3], from: 'center', axis: 'y'}),
-        rotateZ: anime.stagger([0, 90], {grid: [5, 3], from: 'center', axis: 'x'}),
-        delay: anime.stagger(200, {grid: [5, 3], from: 'center'}),
-        easing: 'easeInOutQuad'
-    });
 
+    anime.timeline({loop:false})
+    .add({
+        targets: '.expCubeRed',
+        rotate: {value: -90},
+    }).add({
+        targets: '.expCubeRed',
+        rotate: {value: -50, duration:1600},
+    })
+
+    anime.timeline({loop:false})
+    .add({
+        targets: '.expCubeOrange',
+        translateX: {value: -6},
+        rotate: {value: -90},
+    }).add({
+        delay:200,
+        targets: '.expCubeOrange',
+        rotate: {value: -55, duration:1400},
+    })
+
+    anime.timeline({loop:false})
+    .add({
+        targets: '.expCubeYellow',
+        translateX: {value: -13},
+        rotate: {value: -90},
+
+    }).add({
+        delay:400,
+        targets: '.expCubeYellow',
+        rotate: {value: -60, duration:1400},
+    })
+
+    anime.timeline({loop:false})
+    .add({
+        targets: '.expCubeGreen',
+        translateX: {value: -20},
+        rotate: {value: -90},
+
+    }).add({
+        delay:600,
+        targets: '.expCubeGreen',
+        rotate: {value: -70, duration:1600},
+    })  
+    
+    anime.timeline({loop:false})
+    .add({
+        targets: '.expCubeDarkGreen',
+        translateX: {value: -27},
+        rotate: {value: -90},
+
+    }).add({
+        delay:800,
+        targets: '.expCubeDarkGreen',
+        // rotate: {value: -50, duration:1600},
+    })
+
+    
     return(
         <div className="frontPage">
-
             <InfiniteScroll
                 pageStart={0}
                 loadMore={loadFunc}
@@ -155,16 +205,16 @@ function Frontpage(){
             }}>
 
                 <Grid className={"gromGrid"}
-                      areas={[
-                          {name: 'myname', start: [0, 0], end: [0, 0]},
-                          {name: 'picMe', start: [2, 0], end: [2, 0]},
-                          {name: 'card1', start:[0, 1], end: [1, 1]},
-                          {name: 'card2', start: [2, 1], end: [2, 1]},
-                          {name: 'experties', start:[0, 2], end: [2, 2]}
-                      ]}
-                      columns={['flex', 'small', 'flex']}
-                      rows={['medium', 'small', 'medium']}
-                      gap={"medium"}
+                    areas={[
+                        {name: 'myname', start: [0, 0], end: [0, 0]},
+                        {name: 'picMe', start: [2, 0], end: [2, 0]},
+                        {name: 'card1', start:[0, 1], end: [1, 1]},
+                        {name: 'card2', start: [2, 1], end: [2, 1]},
+                        {name: 'experties', start:[0, 2], end: [2, 2]}
+                    ]}
+                    columns={['flex', 'small', 'flex']}
+                    rows={['medium', 'small', 'medium']}
+                    gap={"medium"}
                 >
 
                     {cardContent.map(item => (
@@ -186,7 +236,7 @@ function Frontpage(){
                         </Box>
                     ))}
                     <Box gridArea={'myname'} gap={"small"}>
-                        <h6 className={"introduction"}>Hello, I am</h6>
+                        <h6 className={"introduction"}>Hello There, I am</h6>
                         <h1 className={"ml12"}>
                             <div className={"name_background"}>
                                 <span className='letter'>T</span>
@@ -208,37 +258,63 @@ function Frontpage(){
                         </h1>
                     </Box>
                     <Box gridArea={'picMe'} className={"pictureMe"} idd={"picMegrid"} animation={{type: "fadeIn", duration: 4000}} gap={"none"}/>
-                    {/* <Box gridArea={'picMe'} className={"pictureMe"} gap={"none"}></Box> */}
                     <Box gridArea={'experties'} className={"card-body card"} id={"expertiesCard"}>
-                        <p className="card-title">My experties?</p>
-                        <div className={"skillDiv"}>
-                            <p className={"expTilte"}>Java:</p>
-                            <Keyboard className={"expCube"} size={"large"} color={colorRed}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorOrange}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorYellow}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
+                        <p className="card-title">My Skills</p>
+                        <div className='skillDivRow'>
+                            <div className={'skillDivColumn'}>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>Java:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorBlack}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorBlack}/>
+                                </div>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>JS & TS:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorGreen}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorBlack}/>
+                                </div>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>HTML & CSS:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorGreen}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorDarkGreen}/>
+                                </div>
+                            </div>
+                            <div className={'skillDivColumn'}>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>Python:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorBlack}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorBlack}/>
+                                </div>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>PHP:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorBlack}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorBlack}/>
+                                </div>
+                                <div className={"skillDiv"}>
+                                    <p className={"expTilte"}>Liquid:</p>
+                                    <Keyboard className={"expCubeRed"} size={"medium"} color={colorRed}/>
+                                    <Keyboard className={"expCubeOrange"} size={"medium"} color={colorOrange}/>
+                                    <Keyboard className={"expCubeYellow"} size={"medium"} color={colorYellow}/>
+                                    <Keyboard className={"expCubeGreen"} size={"medium"} color={colorGreen}/>
+                                    <Keyboard className={"expCubeDarkGreen"} size={"medium"} color={colorDarkGreen}/>
+                                </div>
+                            </div>
                         </div>
-                        <div className={"skillDiv"}>
-                            <p className={"expTilte"}>JS: </p>
-                            <Keyboard className={"expCube"} size={"large"} color={colorRed}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorOrange}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorYellow}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
-                        </div>
-                        <div className={"skillDiv"}>
-                            <p className={"expTilte"}>HTML && CSS: </p>
-                            <Keyboard className={"expCube"} size={"large"} color={colorRed}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorOrange}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorYellow}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
-                            <Keyboard className={"expCube"} size={"large"} color={colorBlack}/>
-                        </div>
-
-
                     </Box>
-
                 </Grid>
 
                 {/*animate={{x: [0,100,0]}} transition={{ease: "easeOut", duration:1}}*/}
